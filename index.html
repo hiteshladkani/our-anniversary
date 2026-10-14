@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Anniversary, My Love ❤️</title>
+<meta name="description" content="A little corner of the internet built just for you." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>" />
+</head>
+<body>
+
+<div class="hearts-bg" id="heartsBg" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="#home" class="nav__brand">Us&nbsp;❤️</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Menu">☰</button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#memories">Memories</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#letter">Letter</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#reasons">Reasons</a></li>
+    <li><a href="#countdown">Together</a></li>
+    <li><a href="#coupons">Coupons</a></li>
+    <li><a href="#openwhen">Open When</a></li>
+    <li><a href="#future">Future</a></li>
+    <li><a href="#surprise">Surprise</a></li>
+  </ul>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="home">
+  <div class="hero__glow"></div>
+  <div class="hero__content reveal">
+    <p class="hero__eyebrow">Happy Anniversary</p>
+    <h1 class="hero__title">Baby &amp; Rose</h1>
+    <p class="hero__sub" id="heroSub">Every love story is beautiful, but ours is my favourite.</p>
+    <div class="hero__countdown-mini" id="heroCountdownMini"></div>
+    <div class="hero__actions">
+      <a href="#memories" class="btn btn--primary">Begin our story ❤</a>
+      <a href="#surprise" class="btn btn--ghost">One last thing…</a>
+    </div>
+  </div>
+  <a href="#memories" class="hero__scroll" aria-label="Scroll down">⌄</a>
+</header>
+
+<main>
+
+  <!-- ============ 1. MEMORIES ============ -->
+  <section class="section" id="memories">
+    <div class="section__head reveal">
+      <span class="section__emoji">📸</span>
+      <h2 class="section__title">Our Memories</h2>
+      <p class="section__sub">Little moments I never want to forget.</p>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <!-- ============ 1b. VIDEOS ============ -->
+  <section class="section section--tint" id="videos" hidden>
+    <div class="section__head reveal">
+      <span class="section__emoji">🎥</span>
+      <h2 class="section__title">Our Videos</h2>
+      <p class="section__sub">Little moving memories of us.</p>
+    </div>
+    <div class="videos" id="videoGallery"></div>
+  </section>
+
+  <!-- ============ 2. LOVE LETTER ============ -->
+  <section class="section section--tint" id="letter">
+    <div class="section__head reveal">
+      <span class="section__emoji">💌</span>
+      <h2 class="section__title">A Love Letter</h2>
+      <p class="section__sub">Something I wrote for you.</p>
+    </div>
+    <div class="letter reveal">
+      <div class="letter__closed" id="letterClosed">
+        <div class="letter__seal">❤</div>
+        <p>I wrote you something…</p>
+        <button class="btn btn--primary" id="openLetterBtn">Read my heart</button>
+      </div>
+      <div class="letter__paper" id="letterPaper" hidden>
+        <div class="letter__paper-inner">
+          <p class="letter__dear" id="letterDear">My Dearest,</p>
+          <div id="letterBody"></div>
+          <p class="letter__sign" id="letterSign">Forever yours,<br /><span>Me</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. LOVE STORY ============ -->
+  <section class="section" id="story">
+    <div class="section__head reveal">
+      <span class="section__emoji">🗓️</span>
+      <h2 class="section__title">Our Love Story</h2>
+      <p class="section__sub">From hello to forever.</p>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <!-- ============ 4. REASONS ============ -->
+  <section class="section section--tint" id="reasons">
+    <div class="section__head reveal">
+      <span class="section__emoji">🥹</span>
+      <h2 class="section__title">Reasons Why I Love You</h2>
+      <p class="section__sub">Tap the heart for another reason.</p>
+    </div>
+    <div class="reasons reveal">
+      <button class="reasons__heart" id="reasonHeart" aria-label="Show a reason">❤</button>
+      <p class="reasons__hint">tap the heart</p>
+      <p class="reasons__text" id="reasonText" aria-live="polite">Because you make ordinary days feel special.</p>
+      <p class="reasons__count" id="reasonCount"></p>
+    </div>
+  </section>
+
+  <!-- ============ 6. COUNTDOWN / TOGETHER ============ -->
+  <section class="section section--tint" id="countdown">
+    <div class="section__head reveal">
+      <span class="section__emoji">⏳</span>
+      <h2 class="section__title">How Long We've Been Together</h2>
+      <p class="section__sub" id="countdownSince">Counting every second since the day it all began.</p>
+    </div>
+    <div class="countdown reveal" id="countdownGrid">
+      <div class="countdown__unit"><span class="countdown__num" id="cdDays">0</span><span class="countdown__label">Days</span></div>
+      <div class="countdown__unit"><span class="countdown__num" id="cdHours">0</span><span class="countdown__label">Hours</span></div>
+      <div class="countdown__unit"><span class="countdown__num" id="cdMins">0</span><span class="countdown__label">Minutes</span></div>
+      <div class="countdown__unit"><span class="countdown__num" id="cdSecs">0</span><span class="countdown__label">Seconds</span></div>
+    </div>
+    <p class="countdown__note reveal" id="countdownNote"></p>
+  </section>
+
+  <!-- ============ 7. LOVE COUPONS ============ -->
+  <section class="section" id="coupons">
+    <div class="section__head reveal">
+      <span class="section__emoji">🎟️</span>
+      <h2 class="section__title">Love Coupons</h2>
+      <p class="section__sub">Redeemable anytime, no expiry date.</p>
+    </div>
+    <div class="coupons" id="coupons"></div>
+    <p class="coupons__note reveal">Click a coupon to redeem it. Valid forever, for you only. ❤</p>
+  </section>
+
+  <!-- ============ 8. OPEN WHEN ============ -->
+  <section class="section section--tint" id="openwhen">
+    <div class="section__head reveal">
+      <span class="section__emoji">💗</span>
+      <h2 class="section__title">Open When…</h2>
+      <p class="section__sub">Read these whenever you need them.</p>
+    </div>
+    <div class="openwhen" id="openwhen"></div>
+  </section>
+
+  <!-- ============ 9. FUTURE ============ -->
+  <section class="section" id="future">
+    <div class="section__head reveal">
+      <span class="section__emoji">🌙</span>
+      <h2 class="section__title">Our Future Together</h2>
+      <p class="section__sub">Everything I still want to do with you.</p>
+    </div>
+    <div class="future" id="future"></div>
+    <h3 class="future__promise-title reveal">My promises to you</h3>
+    <ul class="promises" id="promises"></ul>
+  </section>
+
+  <!-- ============ 10. FINAL SURPRISE ============ -->
+  <section class="section section--surprise" id="surprise">
+    <div class="section__head reveal">
+      <span class="section__emoji">🎁</span>
+      <h2 class="section__title">One Last Thing…</h2>
+    </div>
+    <div class="surprise reveal">
+      <button class="btn btn--primary btn--big" id="surpriseBtn">One last thing, my love…</button>
+      <div class="surprise__reveal" id="surpriseReveal" hidden>
+        <div class="surprise__card">
+          <p class="surprise__line" id="surpriseLine1"></p>
+          <div class="surprise__photo"><img id="surprisePhoto" alt="Our favourite moment" /></div>
+          <p class="surprise__final" id="surpriseFinal"></p>
+          <div class="surprise__confetti" id="confetti" aria-hidden="true"></div>
+        </div>
+        <p class="surprise__endless">❤ ❤ ❤</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Made with love, only for you. <span class="footer__heart">❤</span></p>
+  <p class="footer__small">Scroll back up whenever you need a reminder of how loved you are.</p>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

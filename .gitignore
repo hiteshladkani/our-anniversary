@@ -1,0 +1,11 @@
+# Original WhatsApp media (duplicates — the site uses the images/ and videos/ folders)
+WhatsApp Image *.jpeg
+WhatsApp Video *.mp4
+
+# OS / editor junk
+Thumbs.db
+desktop.ini
+.DS_Store
+videos/
+push.out
+push.err
